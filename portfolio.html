@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="portfolio.css" rel="stylesheet">
+<script src="portfolio.js"></script>
+</head>
+<body class="p-2 sm:p-1 mx-auto font-sans">
+
+<header class=" container w-full h-32 flex items-center justify-between bg-[#106EBE] border-2 border-[#0FFCBE] mx-auto">
+  <div class="flex-none pl-6 p-3 text-bold text-3xl text-white"><button class="bt1">FIDHASHERIN EK</button></div>
+  <nav class="flex  flex-wrap p-3 gap-4 sm:flex-row items-center justify-end sm:pr-9 sm:gap-4 text-white" id="navbar">
+
+      <div><button id="home" onclick="homeSection('home')">Home</button></div>
+      <div><button onclick="aboutSection('abo')">About me</button></div>
+      <div><button onclick="resumeSection('res')">Resume</button></div>
+      <div><button onclick="skillSection('ski')">Skills</button></div>
+      <div><button  onclick="projectsSection('pro')" >Projects</button></div>
+      
+      <div><button onclick="contactSection('con')">Contacts</button></div>
+     
+  </nav>
+</header>
+
+<section class="container mx-auto">
+  <div class="grid w-full grid-cols-1 sm:grid-cols-2 min-h-screen  font-sans ">
+    <div class="bg-[#106EBE] pt-20 px-20 ">
+        <p class="text-white text-3xl sm:text-4xl lg:text-8xl font-bold mx-auto">Hi,I'm Fidhasherin</p>
+        <h1 class="text-2xl sm:text-4xl text-gray-400 mt-2 font-bold p-4">A mathematics student</h1>
+        <p class="text-white mt-4 text-xl sm:text-lg p-1">I aim to bridge the gap between mathematical theory and practical applications through code,creating innovative solutions that address  <br> real-world problems.</p><br>
+         <button class=" text-center rounded-2xl  text-white  mt-7 get" onclick="getInTouch('ge')">Get-in-Touch
+        </button>
+    </div>
+    <div class="bg-[#106EBE] flex justify-center items-center p-2">
+       <div class=" w-[500px] h-[500px] rounded-full mx-auto p-8 shadow-[0_0_20px_white] rotation flex justify-center">
+        <img src="data:image/jpeg;base64,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" class="max-w-full h-auto rounded-full border-b-white ">
+
+    </div>
+  </div>
+</section>
+
+<section class="container mx-auto  bg-white" id="about">
+    <h1 class="text-center text-4xl sm:text-5xl text-[#106EBE] font-bold underline decoration-[#0FFCBE] mb-6 ">About me</h1>
+
+  <div class="grid w-full grid-cols-1 sm:grid-cols-2  min-h-screen ">
+    <div class="bg-white p-2 flex justify-center">
+      <div class="bg-[#106EBE]  rounded-3xl">
+        <img src="port.png" class="max-w-full h-auto rounded-xl border-b-2">
+      </div>
+      
+    </div>
+    <div class=" bg-white pt-20 text-[#106EBE]">
+      <p class="text-lg sm:text-4xl font-bold">Mathematics  Student</p><br>
+      <h1 class="text-sm sm:text-lg text-gray-600"> I'm Fida Sherin, a mathematics student with a strong passion for programming. I specialize in developing web applications using technologies like HTML, CSS, JavaScript, and frameworks.<br>
+
+         My goal is to leverage my analytical skills to create innovative solutions that bridge the gap between mathematical concepts and practical applications. Through my projects, I aim to demonstrate the synergy between mathematics and technology.</h1>
+      <div class="fron flex flex-wrap justify-start gap-3 mt-5">
+         <span>problem Solver</span>
+         <span>Maths Tutor</span>
+  
+      </div>
+       <button class=" text-center bg-[#106EBE] rounded-2xl  text-white border-[#0FFCBE]  mt-7 get "  onclick="getInTouch('ge')">Get-in-Touch
+        </button>
+       
+    </div>
+  </div>
+</section>
+<section class="container mx-auto mt-1 " id="resum">
+   <div class="w-full  grid grid-cols-1 place-items-center justify-center bg-[#B2BEB5] min-h-screen ">
+     <p class="text-white text-5xl text-center font-bold underline decoration-[#0FFCBE] mb-4 ">Resume</p>
+     <div class="min-w-[400px] bg-[#106EBE] shadow-[0_0_15px_#0FFCBE] h-[400px] rounded-3xl lg:w-[800px] flex flex-col justify-center gap-3">
+      <p class="text-center text-3xl p-4  text-white font-sans">My professional Resume</p>
+      <h1 class="text-center">Professional at the Intersection of  mathematics & programming</h1>
+       <span class="text-center font-serif"> 
+         <button class="text-lg border-b bg-[#0FFCBE] p-2 m-2 rounded-xl     transform duration-300 ease-in hover:scale-110" onclick="previewResume('view')">
+          <i class="fa fa-eye p-1" style="font-size:20px"></i>preview Resume
+        </button>
+         <button class="text-lg border-b-2 border-[#0FFCBE] bg-white p-2 m-2 rounded-lg   transform duration-300 ease-in hover:scale-110  hover:bg-[#0FFCBE]/50"  onclick="downloadPdf('pdf')">
+            <i class='fas fa-file-download p-1' style='font-size:24px'></i>
+             download pdf
+        </button>
+       </span>
+     </div>
+
+   </div>
+</section>
+
+<section class="container mx-auto bg-[#106EBE] py-6 min-h-screen  " id="skill">
+  <p class="text-center text-5xl text-[#0FFCBE] font-bold underline decoration-white mb-4">Technical Skills</p>
+  <div class="grid grid-cols-1  sm:grid-cols-3 gap-4" id="skills" >
+    <div class="bg-white p-6 flex flex-col items-center rounded-2xl " >
+      <i class="fas fa-desktop text-[#0FFCBE] text-5xl"></i>
+      <p class="mt-2">Frontend Development</p>
+      <div class="fron flex flex-wrap justify-center gap-2 mt-2">
+        <span>Html</span>
+        <span>JavaScript</span>
+        <span>Css</span>
+        <span>Python</span>
+        <span>Responsive Design</span>
+      </div>
+    </div>
+    <div class="bg-white p-4 flex flex-col items-center rounded-2xl">
+      <i class='fas fa-calculator text-[#0FFCBE] text-5xl'></i>
+      <p class="mt-2">Mathematics & Computational </p>
+      <div class="fron flex flex-wrap justify-center gap-2 mt-2">
+        <span>OverLeaf</span>
+        <span>Matlab</span>
+        <span>Excel</span>
+        <span>Python</span>
+        <span>Numerical Methods</span>
+      </div>
+    </div>
+    <div class="bg-white p-4 flex flex-col items-center rounded-2xl">
+      <i class="fa fa-mobile-phone text-[#0FFCBE] text-7xl"></i>
+      <p class="mt-2">Graphic Design</p>
+      <div class="fron flex flex-wrap justify-center gap-2 mt-2">
+        <span>Canva</span>
+        <span>Pixellab</span>
+        <span>Adobe Photoshop</span>
+        <span>Illustrator</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- <section class="container mx-auto mt-6">
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+    <div class="bg-red-500 h-64">1</div>
+    <div class="bg-gray-500 h-64">2</div>
+    <div class="bg-green-500 h-64">3</div>
+  </div>
+</section> -->
+<section class="container mx-auto bg-[#B2BEB5]  mt-1" id="proj">
+  <p class="text-center text-5xl text-white font-bold underline decoration-[#106EBE]  font-bold mb-4">Projects</p>
+  <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 min-h-screen p-10  " id="projects" >
+    
+    <div class=" bg-red-500    flex flex-col justify-start gap-4">
+      <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240520152253/Group-Theory.webp" class="max-w-full">
+      <h1>Group Theory& Rings</h1>
+      <p1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis ullam culpa ex voluptate voluptatem provident sint voluptatum totam. Maiores ea doloremque eaque vel tenetur id incidunt illo quia, cupiditate molestias!</p1>
+      <div class="fron flex flex-wrap justify-center gap-2 mt-2">
+       <span>Over Leaf</span>
+       <span>Python</span>
+       <span>Numerical</span>
+      </div>
+      <!-- https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSIfZCio1FvQWhZoaB58S3EGqOMS6OI38YOk-wEcZ2xngCAu_Ep0yH9cg&s -->
+    </div>
+    <div class=" bg-red-500   flex flex-col justify-start gap-4">
+      <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240520152253/Group-Theory.webp" >
+      <h1>Group Theory& Rings</h1>
+      <p1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis ullam culpa ex voluptate voluptatem provident sint voluptatum totam. Maiores ea doloremque eaque vel tenetur id incidunt illo quia, cupiditate molestias!</p1>
+         <div class="fron flex flex-wrap justify-center gap-2 mt-2">
+          <span>Over Leaf</span>
+          <span>Python</span>
+          <span>Numerical</span>
+       </div>
+    </div>
+    <div class=" bg-red-500    flex flex-col justify-start gap-4">
+      <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240520152253/Group-Theory.webp" >
+      <h1>Group Theory& Rings</h1>
+      <p1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis ullam culpa ex voluptate voluptatem provident sint voluptatum totam. Maiores ea doloremque eaque vel tenetur id incidunt illo quia, cupiditate molestias!</p1>
+         <div class="fron flex flex-wrap justify-center gap-2 mt-2">
+          <span>Over Leaf</span>
+          <span>Python</span>
+          <span>Numerical</span>
+        </div>
+    </div>
+   
+  </div>
+</section>
+
+<section class="container  mt-1 bg-[#106EBE] mx-auto min-h-screen" id="cont">
+  <h1 class="text-center text-4xl sm:text-5xl text-white font-bold underline decoration-[#0FFCBE] mb-6">Get In Touch</h1>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <div class="bg-[#106EBE] p-4 rounded-3xl flex flex-col gap-4 max-w-full">
+      <p class="text-[#0FFCBE] text-3xl sm:text-5xl font-bold">Let's build amazing together</p>
+      <p class="text-gray-400 text-sm sm:text-lg">I'm currently available for freelance projects, full-time opportunities, or just to discuss web development.</p>
+      <form class="flex flex-col gap-4 w-full">
+        <div class="contact1 flex items-center gap-2 w-full">
+          <div class="icon1"><i class="fa-solid fa-envelope-open"></i></div>
+          <span>fidha@gmail.com</span>
+        </div>
+        <div class="contact1 flex items-center gap-2 w-full">
+          <div class="icon1"><i class="fa fa-phone"></i></div>
+          <span>8606361975</span>
+        </div>
+        <div class="contact1 flex items-center gap-2 w-full">
+          <div class="icon1"><i class="material-icons">place</i></div>
+          <span>Malappuram</span>
+        </div>
+      </form>
+      <div class="contact2 flex flex-wrap gap-2">
+        <div class="icon2"> <a href="https://github.com/fidhasherineranhikkal-byte/week-2"></a><i class="fa fa-github"></i></div>
+        <div class="icon2"> <a href="https://github.com/fidhasherineranhikkal-byte/week-2"><i class="fa fa-linkedin-square"></i></a></div>
+        <div class="icon2"><a href="https://www.instagram.com/accounts/login/?hl=en"><i class='fab fa-instagram'></i></a></div>
+      </div>
+    </div>
+    <div class="bg-[#B2BEB5] flex items-center max-w-full rounded-2xl p-4 ">
+      <form action="" class="flex flex-col gap-2 w-full " id="last" onsubmit="checkForm(event)">
+        <label for="text">Name</label>
+        <input type="text" placeholder="Enter your name" name="text" id="name0"  required>
+        <label for="email">Email</label>
+        <input type="email" placeholder="Enter your email" name="email" id="email0"  required>
+        <label for="comment" >Message</label>
+        <textarea placeholder="Message"   id="message0"></textarea>
+        <button type="submit" class="border-b bg-[#106EBE] rounded-3xl p-3 mt-2 text-white w-40" id="sent">SEND MESSAGE</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-[#B2BEB5] h-10 mt-1  mx-auto  text-center">  © Fidhasherin. All rights reserved.</footer>
+
+</body>
+</html>
